@@ -8,11 +8,13 @@ body {
     font-size: 14px;
 }
 
+/* Header */
 .header {
+    position: fixed;
     margin: auto;
     padding-top: 20px;
     font-size: 24px;
-    text-align: center;    
+    text-align: center;
     font-weight: 400;
     line-height: 1.2em;
     text-align: center;
@@ -40,4 +42,26 @@ body {
 
 .header-menu {
     color: #aaa;
+}
+
+.header-menu span {
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.social-icon {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-decoration: none;
+    border-radius: 100%;
+    background: grey;
+    color: #f2f2f2;
 }
