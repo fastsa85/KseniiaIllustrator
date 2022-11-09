@@ -10,7 +10,11 @@ body {
 
 /* Header */
 .header {
-    margin: auto;
+    position: fixed;
+    z-index: 10;
+    background: inherit;
+    top: 0;
+    width: 100%;
     padding-top: 20px;
     font-size: 24px;
     text-align: center;
@@ -48,23 +52,29 @@ body {
 
 /* Footer */
 .footer {
-    text-align: center;
+    position: fixed;
+    z-index: 20;
+    background: inherit;
+    bottom: 0;
     padding-bottom: 60px;
+    width: 100%;
+    text-align: center;
 }
 
-.social-icon {
-    cursor: pointer;
-    padding: 10px;
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-    text-decoration: none;
-    border-radius: 100%;
-    background: grey;
-    color: #f2f2f2;
-}
+    .social-icon {
+        cursor: pointer;
+        padding: 10px;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        text-decoration: none;
+        border-radius: 100%;
+        background: grey;
+        color: #f2f2f2;
+    }
 
 /* Page Content*/
 .page-content {
-    height: 1800px;
+    z-index: 0;
+    padding-top: 140px;
 }
