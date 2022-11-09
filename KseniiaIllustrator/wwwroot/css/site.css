@@ -10,7 +10,6 @@ body {
 
 /* Header */
 .header {
-    position: fixed;
     margin: auto;
     padding-top: 20px;
     font-size: 24px;
@@ -40,12 +39,11 @@ body {
     color: #404040;
 }
 
-.header-menu {
-    color: #aaa;
-}
-
-.header-menu span {
+.header-menu,
+.header-menu  a{
     cursor: pointer;
+    color: #aaa !important;
+    text-decoration: none;
 }
 
 /* Footer */
@@ -64,4 +62,9 @@ body {
     border-radius: 100%;
     background: grey;
     color: #f2f2f2;
+}
+
+/* Page Content*/
+.page-content {
+    height: 1800px;
 }
