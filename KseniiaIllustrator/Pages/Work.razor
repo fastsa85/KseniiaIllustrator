@@ -1,4 +1,25 @@
 ﻿@page "/"
 @page "/work"
 
-<h1>Work Page</h1>
+<div class="preview-gallery">
+    @foreach (var projectPreview in ProjectPreviews)
+    {
+        <div class="preview-gallery-item">
+            <img src="@projectPreview.Thumbnail">
+        </div>
+    }
+    <div class="preview-gallery-item">        
+    </div>
+</div>
+
+@code {
+    [Inject]
+    public IProjectsDataService ProjectsDataService { get; set; }
+
+    public List<ProjectPreview> ProjectPreviews = new List<ProjectPreview>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        ProjectPreviews = ProjectsDataService.GetAllProjectPreviews();
+    }
+}
