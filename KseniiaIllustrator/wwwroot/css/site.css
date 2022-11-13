@@ -94,6 +94,7 @@ body::-webkit-scrollbar {
 }
 
 .preview-gallery-item {
+    position: relative;
     height: 40vh;
     flex-grow: 1;
     cursor: pointer;
@@ -110,6 +111,43 @@ body::-webkit-scrollbar {
     vertical-align: bottom;
 }
 
-.preview-gallery-item:hover img {
-    opacity: 0.2;
+.preview-gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #ff884d;
+}
+
+.preview-gallery-item:hover .overlay {
+    opacity: 0.7;
+}
+
+.thumb-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 40px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1em;
+    color: #fff;
+    opacity: 0;
+}
+
+.preview-gallery-item:hover .thumb-title {
+    opacity: 1;
+}
+
+.thumb-title h2 {
+    font-weight: 300 !important;
+    font-style: normal;
+    font-size: 22px;
 }
