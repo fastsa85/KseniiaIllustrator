@@ -8,6 +8,10 @@ body {
     font-size: 14px;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* Header */
 .header {
     position: fixed;
@@ -44,7 +48,7 @@ body {
 }
 
 .header-menu,
-.header-menu  a{
+.header-menu a {
     cursor: pointer;
     color: #aaa !important;
     text-decoration: none;
@@ -56,25 +60,56 @@ body {
     z-index: 20;
     background: inherit;
     bottom: 0;
-    padding-bottom: 60px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     width: 100%;
     text-align: center;
 }
 
-    .social-icon {
-        cursor: pointer;
-        padding: 10px;
-        font-size: 20px;
-        width: 20px;
-        height: 20px;
-        text-decoration: none;
-        border-radius: 100%;
-        background: grey;
-        color: #f2f2f2;
-    }
+.social-icon {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-decoration: none;
+    border-radius: 100%;
+    background: grey;
+    color: #f2f2f2;
+}
 
 /* Page Content*/
 .page-content {
     z-index: 0;
-    padding-top: 140px;
+    margin: 160px 6px;
+    max-width: none;
+    width: 100%;
+}
+
+/* Projects list*/
+.preview-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.preview-gallery-item {
+    height: 40vh;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.preview-gallery-item:last-child {
+     flex-grow: 10;
+}
+
+.preview-gallery-item img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+.preview-gallery-item:hover img {
+    opacity: 0.2;
 }
