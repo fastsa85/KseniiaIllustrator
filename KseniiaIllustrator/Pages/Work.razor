@@ -5,12 +5,12 @@
     @foreach (var projectPreview in ProjectPreviews)
     {
         <div class="preview-gallery-item">
-            <img src="@projectPreview.Thumbnail">
+            <img src="@projectPreview.ThumbnailImage">
             <div class="overlay"></div>
             <div class="thumb-title">
                 @projectPreview.Title
                 <br/>
-                <h2>@projectPreview.PreviewDescription</h2>
+                <h2>@projectPreview.ShortDescription</h2>
             </div>
         </div>
     }
@@ -20,12 +20,12 @@
 
 @code {
     [Inject]
-    public IProjectsDataService ProjectsDataService { get; set; }
+    public IProjectsPreviewRepository ProjectsDataService { get; set; }
 
-    public List<ProjectPreview> ProjectPreviews = new List<ProjectPreview>();
+    public IEnumerable<ProjectPreview> ProjectPreviews = new List<ProjectPreview>();
 
     protected override async Task OnInitializedAsync()
     {
-        ProjectPreviews = ProjectsDataService.GetAllProjectPreviews();
+        ProjectPreviews = ProjectsDataService.GetAllProjectPreviews().ToList();
     }
 }
