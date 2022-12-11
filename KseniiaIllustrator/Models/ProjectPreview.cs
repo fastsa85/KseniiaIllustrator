@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Shared.Models
+﻿namespace KseniiaIllustrator.Models
 {
     public class ProjectPreview
     {

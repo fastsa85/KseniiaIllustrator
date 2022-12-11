@@ -1,8 +1,8 @@
-﻿using Shared.Models;
+﻿using KseniiaIllustrator.Models;
 
 namespace KseniiaIllustrator.Services
 {
-    public interface IProjectsDataService
+    public interface IProjectsRepository
     {
         List<ProjectPreview> GetAllProjectPreviews();
     }
